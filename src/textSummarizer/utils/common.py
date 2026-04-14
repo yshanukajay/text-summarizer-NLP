@@ -32,13 +32,13 @@ def read_yaml(path_to_yaml: Path) -> ConfigBox:
         raise
 
 @ensure_annotations
-def create_directories(path_to_directories: list[Path], verbose=True) -> None:
+def create_directories(path_to_directories: list, verbose=True):
     try:
         """
         Creates directories from a list of paths.
 
         Args:
-            path_to_directories (list[Path]): List of paths to create directories.
+            path_to_directories (list): List of paths to create directories.
             verbose (bool, optional): If True, logs the creation of directories. Defaults to True.
         """
         for path in path_to_directories:
